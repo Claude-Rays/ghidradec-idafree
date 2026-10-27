@@ -10,7 +10,7 @@ rem     installation whose decompiler sources are compiled in)
 rem  3. Configures (CMake + Ninja) and builds the plugin into .\bin (static CRT)
 rem
 rem  Usage:  set IDASDK=C:\path\to\ida-sdk
-rem          set GHIDRA_DIR=C:\path\to\ghidra_12.1.4_PUBLIC
+rem          set GHIDRA_DIR=C:\path\to\ghidra_12.2_PUBLIC
 rem          build.bat            incremental build
 rem          build.bat clean      wipe the build directory first
 rem ===========================================================================
@@ -29,7 +29,7 @@ if not exist "%IDASDK%\src\cmake\idasdk_init.cmake" (
 )
 if not defined GHIDRA_DIR (
     echo [!] GHIDRA_DIR is not set. Point it to your Ghidra installation, e.g.:
-    echo       set GHIDRA_DIR=C:\path\to\ghidra_12.1.4_PUBLIC
+    echo       set GHIDRA_DIR=C:\path\to\ghidra_12.2_PUBLIC
     exit /b 1
 )
 

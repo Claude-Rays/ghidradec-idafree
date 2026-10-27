@@ -6,7 +6,7 @@ GhidraDec decompiles IDA functions with Ghidra's decompiler. It does not need Ja
 
 ![GhidraDec viewer next to the disassembly](screenshots/decompile-function.png)
 
-> **Note:** So far the plugin has only been tested on Windows, with IDA Free 9.4, Ghidra 12.1.4 and x64 PE binaries (the ELF loader of the [C API](#c-api) has not been tested). It is a native plugin built with the current SDK, so it should work in IDA Pro too.
+> **Note:** So far the plugin has only been tested on Windows, with IDA Free 9.4, Ghidra 12.1.4 and 12.2, and x64 PE binaries (the ELF loader of the [C API](#c-api) has not been tested). It is a native plugin built with the current SDK, so it should work in IDA Pro too.
 
 The original is already a C++ plugin. This port keeps its decompiler bridge, drops what a current IDA does not need (old SDKs, 32-bit builds, RetDec and jsoncpp), fixes the protocol errors seen with Ghidra 12 and sends the decompiler more of what the database knows: see [Differences from the original](#differences-from-the-original).
 
@@ -29,7 +29,7 @@ Requirements (Windows):
 
 ```bat
 set IDASDK=C:\path\to\ida-sdk
-set GHIDRA_DIR=C:\path\to\ghidra_12.1.4_PUBLIC
+set GHIDRA_DIR=C:\path\to\ghidra_12.2_PUBLIC
 build.bat          :: incremental build
 build.bat clean    :: build from scratch
 ```
